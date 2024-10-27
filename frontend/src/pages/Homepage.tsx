@@ -36,7 +36,7 @@ export default function Component() {
     try {
       const response = await axios.post(`${BACKEND_URL}/question/ask`, null, {
         params: {
-          id:35,
+          id:36,
           question: input
         }
       });
