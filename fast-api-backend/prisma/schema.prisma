@@ -1,0 +1,17 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-py"
+  interface = "asyncio"
+}
+
+model Document {
+  id         Int      @id @default(autoincrement())
+  filename   String 
+  filepath   String
+  content    String
+  uploadDate DateTime @default(now())
+}
